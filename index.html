@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Acceso</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+<body>
+
+    <div id="preloader-container">
+        <div class="verifier-box">
+            <div class="logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                    <path d="m9 12 2 2 4-4"/>
+                </svg>
+            </div>
+            <div class="verification-item hidden" id="item-ip">
+                <span>IP:</span>
+                <span id="ip-address" class="loading">Cargando...</span>
+            </div>
+            <div class="verification-item hidden" id="item-browser">
+                <span>Navegador:</span>
+                <span id="browser-info" class="loading">Cargando...</span>
+            </div>
+            <div class="verification-item hidden" id="item-os">
+                <span>Sistema Operativo:</span>
+                <span id="os-info" class="loading">Cargando...</span>
+            </div>
+            <div class="verification-item hidden" id="item-location">
+                <span>Ubicación:</span>
+                <span id="location-info" class="loading">Cargando...</span>
+            </div>
+            <div class="verification-item hidden" id="item-isp">
+                <span>ISP:</span>
+                <span id="isp-info" class="loading">Cargando...</span>
+            </div>
+            <button id="continue-button" class="hidden-button" disabled>Continuar</button>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <video id="background-video" muted loop></video>
+        <audio id="background-music" loop></audio>
+
+        <canvas id="particles-canvas"></canvas>
+
+        <div class="profile-container">
+            <div class="profile-box">
+                <div class="profile-image-wrapper">
+                    <img id="deco_us1" class="profile-deco" src="./assets/3/2/12.png" alt="Marco de perfil">
+                    <img id="img1" class="profile-picture" src="./assets/3/3/3.gif" alt="Foto de perfil">
+                </div>
+                <div class="profile-info">
+                    <h2 id="username1">MaximoDev</h2>
+                    <p class="user-description">Desarrollador web | Creador de contenido</p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-4.8-4.8H9a4.8 4.8 0 0 0-4.8 4.8v4"/><path d="M15 22v-4a4.8 4.8 0 0 0-4.8-4.8H9a4.8 4.8 0 0 0-4.8 4.8v4"/><path d="M9 20h6"/><path d="M12 2v10"/><path d="M12 2l-6 6h12z"/></svg></a>
+                        <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-2.1 1.7-5 3C14 7 12 7 10 7a6 6 0 0 0-6 6c0 1 0 2 1 3c-2 1-4 2-5 3c-1 1-1 2 0 3"/><path d="M22 4s-2.1 1.7-5 3C14 7 12 7 10 7a6 6 0 0 0-6 6c0 1 0 2 1 3c-2 1-4 2-5 3c-1 1-1 2 0 3"/></svg></a>
+                        <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 20v-4a4.8 4.8 0 0 0-4.8-4.8H9a4.8 4.8 0 0 0-4.8 4.8v4"/><path d="M16 20v-4a4.8 4.8 0 0 0-4.8-4.8H9a4.8 4.8 0 0 0-4.8 4.8v4"/><path d="M12 2v10"/><path d="M12 2l-6 6h12z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
